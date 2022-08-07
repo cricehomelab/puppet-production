@@ -4,17 +4,21 @@ class pihole {
   # ensure the service is started. 
   $params = {
     "piholeinstallscript" => '/tmp/install-pihole.sh'
-    "piholeinstallscriptlocation" => 'puppet:///modules/pihole/Pi-hole'
+    "piholefilelocation"  => 'puppet:///modules/pihole/'
+    "piholeconfigfile"    => '/etc/pihole/setupVars.conf'
   }
 
   file { $piholeinstallscript :
-    ensure => file,
+    ensure => present,
     source => $piholeinstallscriptlocation,
 
   }
-  exec { 'sh install-pihole.sh' :
-    cwd => '/tmp/',
-    requires => $piholeinstallscript,
+  file { $piholeconfigfile: 
+    ensure => present,
     
+  }
+  exec { 'sh install-pihole.sh' :
+    cwd => '/tmp/',    
+    requires => file[$piholeinstallscript, $piholeconfigfile],
   }
 }
