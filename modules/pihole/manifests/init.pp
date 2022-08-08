@@ -27,4 +27,5 @@ class pihole {
     cwd => '/tmp/',    
     requires => file[$piholeinstallscript, $piholeconfigfile],
   }
+  
 }
