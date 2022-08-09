@@ -1,6 +1,4 @@
 #! bash.sh
 
 # puppet installation script.
-git clone --depth 1 https://github.com/pi-hole/pi-hole.git Pi-hole
-cd pi-hole/automated install/
-sudo bash basic-install.sh
+curl -L https://install.pi-hole.net | bash /dev/stdin --unattended
