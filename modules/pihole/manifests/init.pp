@@ -3,9 +3,9 @@ class pihole {
   # execute the installer script for pihole
   # ensure the service is started. 
   
-  $piholeinstallscript => '/tmp/install-pihole.sh'
-  $piholedirectory     => '/etc/pihole/'   
-  $piholeconfigfile    => '/etc/pihole/setupVars.conf'
+  $piholeinstallscript = '/tmp/install-pihole.sh'
+  $piholedirectory     = '/etc/pihole/'   
+  $piholeconfigfile    = '/etc/pihole/setupVars.conf'
 
   # rendering template for config file
   $params = {'password' => $::facts[pihole]}
@@ -28,7 +28,7 @@ class pihole {
     content  => $output
     requires => file[$piholedirectory]
   }
-  
+
   # Execution of the install script. 
   exec { 'sh install-pihole.sh' :
     cwd => '/tmp/',    
