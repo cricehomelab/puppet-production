@@ -25,8 +25,8 @@ class pihole {
   # Copy down config file. 
   file { $piholeconfigfile: 
     ensure   => present,
-    content  => $output
-    require => file[$piholedirectory]
+    content  => $output,
+    require => file[$piholedirectory],
   }
 
   # Execution of the install script. 
