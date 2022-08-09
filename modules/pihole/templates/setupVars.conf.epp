@@ -1,8 +1,5 @@
-
-
-
-
-WEBPASSWORD= 
+<% |    String $password| -%>
+WEBPASSWORD=<%= $password -%>
 PIHOLE_INTERFACE=eth0
 IPV4_ADDRESS=192.168.50.129/24
 QUERY_LOGGING=true

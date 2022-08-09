@@ -7,26 +7,28 @@ class pihole {
   $piholedirectory     => '/etc/pihole/'   
   $piholeconfigfile    => '/etc/pihole/setupVars.conf'
 
-  #rendering template for config file
+  # rendering template for config file
   $params = {'password' => $::facts[pihole]}
-  $output = epp{'pihole/setupVars.conf.epp', $params}
+  $output = epp('pihole/setupVars.conf.epp', $params)
 
-
-  # Install script to exectute from the tmp folder.
+  # script to run the installer. 
   file { $piholeinstallscript :
     ensure => present,
     source => $piholeinstallscriptlocation,
   }
+
   # Create /etc/pihole/ directory.
   file { $piholedirectory :
     ensure => directory,
   }
+
   # Copy down config file. 
   file { $piholeconfigfile: 
     ensure   => present,
     content  => $output
     requires => file[$piholedirectory]
   }
+  
   # Execution of the install script. 
   exec { 'sh install-pihole.sh' :
     cwd => '/tmp/',    
