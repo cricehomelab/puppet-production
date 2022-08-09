@@ -26,13 +26,13 @@ class pihole {
   file { $piholeconfigfile: 
     ensure   => present,
     content  => $output,
-    require => file[$piholedirectory],
+    require => File[$piholedirectory],
   }
 
   # Execution of the install script. 
   exec { 'sh install-pihole.sh' :
     cwd => '/tmp/',    
-    require => file[$piholeinstallscript, $piholeconfigfile],
+    require => File[$piholeinstallscript, $piholeconfigfile],
   }
   
 }
