@@ -31,7 +31,7 @@ class pihole {
 
   # Execution of the install script. 
   exec { 'install-command' :    
-    command => 'sh /tmp/install-pihole.sh',    
+    command => '/tmp/install-pihole.sh',    
     require => File[$piholeinstallscript, $piholeconfigfile],
   }
   
