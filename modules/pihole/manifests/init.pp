@@ -34,7 +34,7 @@ class pihole {
   exec { 'install-command' :    
     command  => '/tmp/install-pihole.sh',
     provider => shell, 
-    creates  => '/usr/local/bin/pihole'   
+    creates  => '/usr/local/bin/pihole',   
     require  => File[$piholeinstallscript, $piholeconfigfile],
   }
   
