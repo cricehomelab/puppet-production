@@ -9,6 +9,9 @@ class pihole {
   $piholeinstallscriptlocation = 'puppet:///modules/pihole/install-pihole.sh'
 
   # rendering template for config file
+  # note this seems to get changed when I attempt to set the password on installation. 
+  # I was able to get the password reset from ssh to the pihole.
+  # kind of a bummer but not a big deal. 
   $params = {'password' => $::facts[pihole]}
   $output = epp('pihole/setupVars.conf.epp', $params)
 

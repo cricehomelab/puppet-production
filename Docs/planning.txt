@@ -1,0 +1,17 @@
+Current Plan.
+
+Phase 1: 
+1. Puppet will install/build any system we can. 
+    - Reasoning: To learn how to use puppet better. This is used a lot at work and I'd like to be able to use it better. 
+2. PiHole install.
+    - Reasoning:  Pihole has a widely used community I know I am not the first person to want to automate the installation of it. 
+    - Challenges: Figuring out how the unattended install worked was my first hurdle. 
+                  The second major hurdle was to figure out the right procedure to do in puppet. For instance the order of operations.
+                  The other barrier I had was that I am commiting my code to a github repo and the unattended install had a hashed password in it. While the password was hashed,
+                  I did not want to risk exposure to this. So as a solution to this I went ahead and set the hashed value as an environment variable on my pihole server,  put 
+                  the hashed password there, and finally used a puppet template to insert the password in the correct place so that the password, hashed or not would not be 
+                  commited to code. 
+    - Future:     I am looking into if there are any post install changes I might like to make, and if possible I would like to make them with puppet rather than the pihole 
+                  dashboard. 
+
+Phase 2:
