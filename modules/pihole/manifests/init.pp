@@ -3,9 +3,10 @@ class pihole {
   # execute the installer script for pihole
   # ensure the service is started. 
   
-  $piholeinstallscript = '/tmp/install-pihole.sh'
-  $piholedirectory     = '/etc/pihole/'   
-  $piholeconfigfile    = '/etc/pihole/setupVars.conf'
+  $piholeinstallscript         = '/tmp/install-pihole.sh'
+  $piholedirectory             = '/etc/pihole/'   
+  $piholeconfigfile            = '/etc/pihole/setupVars.conf'
+  $piholeinstallscriptlocation = 'puppet:///modules/pihole/install-pihole.sh'
 
   # rendering template for config file
   $params = {'password' => $::facts[pihole]}
