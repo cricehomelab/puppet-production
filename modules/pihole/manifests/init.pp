@@ -3,7 +3,7 @@ class pihole {
   # execute the installer script for pihole
   # ensure the service is started. 
   
-  $piholeinstallscript         = 'sh /tmp/install-pihole.sh'
+  $piholeinstallscript         = '/tmp/install-pihole.sh'
   $piholedirectory             = '/etc/pihole/'   
   $piholeconfigfile            = '/etc/pihole/setupVars.conf'
   $piholeinstallscriptlocation = 'puppet:///modules/pihole/install-pihole.sh'
@@ -32,7 +32,7 @@ class pihole {
 
   # Execution of the install script. 
   exec { 'install-command' :    
-    command  => '/tmp/install-pihole.sh',
+    command  => 'sh /tmp/install-pihole.sh',
     provider => shell, 
     creates  => '/usr/local/bin/pihole',   
     require  => File[$piholeinstallscript, $piholeconfigfile],
