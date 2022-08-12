@@ -1,0 +1,15 @@
+I purchased the domain "ricehomelab.net". Since I just acquired it i am in the process of having all of my lab infrastructure use this domain. 
+
+I've edited my host templates at /etc/cloud/templates/hosts.debian.tmpl to reflect the correct hostname and FQDN.  
+My firstline is similar to
+
+192.16.50.### nameofservice.ricehomelab.net {{hostname}}
+
+I also removed my static host configurations to get the servers to check in with the puppet master.
+
+Using Pihole I updated my DNS records there to have the correct domains for the new domain name. This should prevent me from having to update the hosts file on each device i want
+to be able to contact each other on the domain. I also think I can make a module in puppet to keep that updated. 
+
+The other thing I needed to do since this whole process broke puppet was to update my DNS servers with Netplan to use my Pihole server rather than my router as the DNS. 
+
+Once that was done the puppet.conf file needed updated for my puppetmaster and pihole. 
