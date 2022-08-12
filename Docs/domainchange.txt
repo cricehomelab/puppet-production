@@ -13,3 +13,7 @@ to be able to contact each other on the domain. I also think I can make a module
 The other thing I needed to do since this whole process broke puppet was to update my DNS servers with Netplan to use my Pihole server rather than my router as the DNS. 
 
 Once that was done the puppet.conf file needed updated for my puppetmaster and pihole. 
+
+From here it was clearing out certs from my puppetmaster, and my node to fully determine the issue and get puppet working again. 
+
+I did find https://puppet.com/docs/puppet/7/ssl_regenerate_certificates.html#concept-4386 to be a very helpful article in terms of that. 
