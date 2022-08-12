@@ -13,5 +13,10 @@ Phase 1:
                   commited to code. 
     - Future:     I am looking into if there are any post install changes I might like to make, and if possible I would like to make them with puppet rather than the pihole 
                   dashboard. 
+3. add a proper domain. 
+    - Reasoning: I would sort of like to do this before this becomes inconveniant to do. 2 machines is better than more, with Pihole set up as DNS now I can enforce my other devices
+    to use Pihole as DNS and configure the hosts for the pihole. 
+4. 
+
 
 Phase 2:
