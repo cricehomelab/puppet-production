@@ -29,7 +29,7 @@ class pihole {
   # Copy down config file. 
   file { $piholeconfigfile: 
     ensure   => present,
-    content  => $output,
+    content  => $output,   #uncomment for reinstalls. 
     require  => File[$piholedirectory],
   }
 
@@ -40,5 +40,6 @@ class pihole {
     creates  => '/usr/local/bin/pihole',   
     require  => File[$piholeinstallscript, $piholeconfigfile],
   }
+  
   
 }

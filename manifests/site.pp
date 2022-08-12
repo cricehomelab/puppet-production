@@ -1,4 +1,6 @@
-# this was the first agent I created.
+
+# this node is for pihole. 
 node "janus-main.local" {
     include pihole
 }
+
