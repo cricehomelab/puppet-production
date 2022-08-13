@@ -17,3 +17,14 @@ Once that was done the puppet.conf file needed updated for my puppetmaster and p
 From here it was clearing out certs from my puppetmaster, and my node to fully determine the issue and get puppet working again. 
 
 I did find https://puppet.com/docs/puppet/7/ssl_regenerate_certificates.html#concept-4386 to be a very helpful article in terms of that. 
+
+After continued challenges in getting my original instance of puppet running. I decided to take advantage of some of the very reasons I am doing this project. 
+The main benefit being that the majority of the challenges in starting over are already written out in the code.
+
+I re-configured 2 cloud init templates I had set up to be my puppetmaster and pihole server this time using my actual domain. Once set up I was able to log in with them
+Pihole was quickly configured and I learned how to manipulate the hosts table to allow traffic between my different VM's. 
+
+Lessons learned:
+1. The more that I can commit to a code base the easier it is to recover.
+2. Changing domains on existing servers is time consuming.
+    A. I'm actively trying to plan my infrastucture so that I don't have to worry about this again if the need arrises. 

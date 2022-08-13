@@ -45,11 +45,9 @@ class pihole {
     creates  => '/usr/local/bin/pihole',   
     require  => File[$piholeinstallscript, $piholeconfigfile],
   }
-
   file { $piholednsrecords :
     ensure => present,
     source => $piholednsrecordlocation,
     require => Exec['install-command'],
-  }  
-  
+  } 
 }
