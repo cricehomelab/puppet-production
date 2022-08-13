@@ -3,10 +3,15 @@ class pihole {
   # execute the installer script for pihole
   # ensure the service is started. 
   
+  # file paths on my pihole i am using. 
   $piholeinstallscript         = '/tmp/install-pihole.sh'
   $piholedirectory             = '/etc/pihole/'   
-  $piholeconfigfile            = '/etc/pihole/setupVars.conf'
+  $piholeconfigfile            = '/etc/pihole/setupVars.conf'  
+  $piholednsrecords            = '/etc/pihole/custom.list'
+
+  # Puppet file locations for pushing files down to pihole
   $piholeinstallscriptlocation = 'puppet:///modules/pihole/install-pihole.sh'
+  $piholednsrecordlocation     = 'puppet:///modules/pihole/custom.list'
 
   # rendering template for config file
   # note this seems to get changed when I attempt to set the password on installation. 
@@ -27,9 +32,9 @@ class pihole {
   }
 
   # Copy down config file. 
-  file { $piholeconfigfile: 
+  file { $piholeconfigfile : 
     ensure   => present,
-    content  => $output,   #uncomment for reinstalls. 
+    content  => $output,  
     require  => File[$piholedirectory],
   }
 
@@ -40,6 +45,11 @@ class pihole {
     creates  => '/usr/local/bin/pihole',   
     require  => File[$piholeinstallscript, $piholeconfigfile],
   }
-  
+
+  file { $piholednsrecords :
+    ensure => present,
+    source => $piholednsrecordlocation,
+    require => Exec['install-command'],
+  }  
   
 }
