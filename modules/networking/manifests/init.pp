@@ -5,16 +5,16 @@ $ip_config_file = '/etc/netplan/50-cloud-init.yaml'
 
 # Setting dns to be equal to the pihole. 
 $ip_params = {
-  $ipaddress  => ::facts[networking][ip]
-  $gateway    => "192.168.50.1"
-  $macaddress => ::facts[networking][mac]
+  $ipaddress  => ::facts[networking][ip],
+  $gateway    => "192.168.50.1",
+  $macaddress => ::facts[networking][mac],
   $dnsserver  => "192.168.50.128"
 }
 
 # configuration of hosts file. 
 $hosts_params = {
-  $hostname  => ::facts[networking][hostname]
-  $fqdn      => ::facts[networking][fqdn]
+  $hostname  => ::facts[networking][hostname],
+  $fqdn      => ::facts[networking][fqdn],
   $ipaddress => ::facts[networking][ip]
 }
 
