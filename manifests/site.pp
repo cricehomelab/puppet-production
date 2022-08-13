@@ -9,7 +9,7 @@ node "dionysus-main.local" {
     include networking
 }
 
-nodee "geppetto-main.local" {
+node "geppetto-main.local" {
     include networking
 }
 
