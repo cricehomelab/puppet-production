@@ -16,6 +16,13 @@ This should detail how to add a new device to puppet.
         b. sudo apt upgrade
     B. Install qemu
         A. sudo apt install qemu-guest-agent
-    C. Reboot
+    D. Verify hostname is correct.
+        A. Check fqdn and adjust if needed in the /etc/hosts file.
+            1. Will likley need updated in /etc/cloud/templates/hosts.debian.tmpl        
+    E. Reboot
         A. Sudo reboot
-    D. 
+    F. Verify you can ping the puppet server by address
+        A. ping puppet.ricehomelab.net
+    G. Verify you can ping the new host from the puppet server. 
+4. Puppet install
+    
