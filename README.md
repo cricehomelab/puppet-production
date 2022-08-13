@@ -27,8 +27,8 @@ Hardware:       Dell Optiplex 7010
     FUNCTION:       plex
     IP:             192.168.50.130
 
-NAME:           DESKTOP-MMLOEAS /n
-FUNCTION:       Primary workstation /n
-Hardware:       MG-VCP15A-3070 /n
+NAME:           DESKTOP-MMLOEAS \n
+FUNCTION:       Primary workstation \n
+Hardware:       MG-VCP15A-3070 \n
 
 
