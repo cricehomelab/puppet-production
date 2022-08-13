@@ -44,8 +44,6 @@ class networking {
   file { $hosts_file :
     ensure  => present,
     content => $hosts_output,
-    require => $ip_config_file,
-    audit  
+    require => $ip_config_file,    
   }
-
 }
