@@ -34,7 +34,7 @@ class networking {
   exec { 'netplan_application':
     command     => 'netplan apply',
     provider    => shell,
-    subscribe   => File[$ip_output],
+    subscribe   => File[$ip_config_file],
     refreshonly => true,
   }
 
