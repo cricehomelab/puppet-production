@@ -42,6 +42,6 @@ class networking {
   file { $hosts_file :
     ensure  => present,
     content => $hosts_output,
-    require => $ip_config_file,    
+    require => File[$ip_config_file],    
   }
 }
