@@ -1,8 +1,7 @@
 <%|
 String $ipaddress,
-String $gateway,
 String $macaddress,
-String $dnsserver
+
 -|%>
 
 # This file is generated from information provided by the datasource.  Changes
@@ -16,12 +15,12 @@ network:
         eth0:
             addresses:
             - <% $ipaddress -%>/24
-            gateway4: <% $gateway -%>
+            gateway4: 192.168.50.1
             match:
                 macaddress: <% $macaddress -%>
             nameservers:
                 addresses:
-                - <% $dnsserver -%>
+                - 192.168.50.128
                 search:
                 - local
             set-name: eth0
