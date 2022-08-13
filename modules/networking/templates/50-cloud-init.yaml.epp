@@ -1,7 +1,6 @@
 <%|
 String $ipaddress,
 String $macaddress,
-
 -|%>
 
 # This file is generated from information provided by the datasource.  Changes
