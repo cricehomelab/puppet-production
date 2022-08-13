@@ -7,9 +7,9 @@ class networking {
   # Setting dns to be equal to the pihole. 
   $ip_params = {
     $ipaddress  => ::facts[networking][ip],
-    $gateway    => "192.168.50.1"
-    $macaddress => ::facts[networking][mac]
-    $dnsserver  => "192.168.50.128"
+    $gateway    => '192.168.50.1',
+    $macaddress => ::facts[networking][mac],
+    $dnsserver  => '192.168.50.128',
   }
 
   # configuration of hosts file. 
