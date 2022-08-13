@@ -31,10 +31,10 @@ class pihole {
     ensure => directory,
   }
 
-  # Copy down config file. 
+  # Copy down config file. need to make this part better. 
   file { $piholeconfigfile : 
     ensure   => present,
-    content  => $output,  
+    # content  => $output,  # uncomment for reinstall
     require  => File[$piholedirectory],
   }
 

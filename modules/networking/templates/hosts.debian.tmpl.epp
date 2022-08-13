@@ -1,0 +1,18 @@
+<% | 
+String $hostname,
+String $fqdn,
+String $ipaddress
+| -%>
+
+
+# Your system has configured 'manage_etc_hosts' as True.
+# This file will be managed by Puppet going forward
+# no change made to this file will be permanent.
+
+<%= $ipaddress -%> <% $fqdn -%> <%= $hostname -%>
+127.0.0.1 localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1 localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
