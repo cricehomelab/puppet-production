@@ -5,7 +5,11 @@ node "janus-main.local" {
     include networking
 }
 
+node "dionysus-main.local" {
+    include networking
+}
+
 # setting a default node.
 node "default" {
-    
+    include networking
 }
