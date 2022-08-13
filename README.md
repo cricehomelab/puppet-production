@@ -18,17 +18,17 @@ Hardware:       Dell Optiplex 7010
     NAME:           geppetto-main
     FUNCTION:       Puppetmaster
     IP:             192.168.50.127
+    STATUS:         Live
 
     NAME:           janus-main
     FUNCTION:       Pi-hole
     IP:             192.168.50.128
+    STATUS:         Live
 
     NAME:           dionysus-main
     FUNCTION:       plex
     IP:             192.168.50.130
+    STATUS:         in progress
 
-NAME:           DESKTOP-MMLOEAS \n
-FUNCTION:       Primary workstation \n
-Hardware:       MG-VCP15A-3070 \n
 
 
