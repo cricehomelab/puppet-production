@@ -1,7 +1,7 @@
 
 class networking {
   # filepaths to the files we are manipulating
-  $hosts_file = '/etc/hosts'
+  $hosts_file = '/etc/cloud/templates/hosts.debian.tmpl'
   $ip_config_file = '/etc/netplan/50-cloud-init.yaml'
 
   # Setting dns to be equal to the pihole. 
