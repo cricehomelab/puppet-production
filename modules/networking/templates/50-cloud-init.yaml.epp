@@ -13,7 +13,7 @@ network:
             - <%= $ipaddress -%>/24
             gateway4: 192.168.50.1
             match:
-                macaddress: <%= $macaddress -%>
+                macaddress: <%= $macaddress %> 
             nameservers:
                 addresses:
                 - 192.168.50.128
