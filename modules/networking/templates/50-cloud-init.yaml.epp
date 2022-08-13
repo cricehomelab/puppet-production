@@ -1,4 +1,4 @@
-<%|String $ipaddress, String $macaddress -|%>
+<%|String $ipaddress, String $macaddress |-%>
 
 # This file is generated from information provided by the datasource.  Changes
 # to it will not persist across an instance reboot.  To disable cloud-init's
