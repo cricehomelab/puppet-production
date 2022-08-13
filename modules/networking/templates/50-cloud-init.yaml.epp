@@ -1,6 +1,6 @@
 <%|
-String $ipaddress,
-String $macaddress,
+Any $ipaddress,
+Any $macaddress,
 
 -|%>
 
