@@ -1,0 +1,21 @@
+
+This should detail how to add a new device to puppet. 
+
+1. Create a machine from one of the cloud init images. 
+    A. Select full clone. 
+    B. Set a VM ID and a name for the host. 
+2. Before booting. 
+    A. Check Cloud-Init in proxmox
+        a. IP address
+        b. DNS
+    B. Configure any hardware settings. 
+        a. Harddrive
+3. After booting
+    A. update and upgrade
+        a. sudo apt update
+        b. sudo apt upgrade
+    B. Install qemu
+        A. sudo apt install qemu-guest-agent
+    C. Reboot
+        A. Sudo reboot
+    D. 
