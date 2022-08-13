@@ -6,15 +6,15 @@ class networking {
 
   # Setting dns to be equal to the pihole. 
   $ip_params = {
-    $ipaddress  => $::facts[networking][ip],
-    $macaddress => $::facts[networking][mac]
+    "ipaddress"  => $::facts[networking][ip],
+    "macaddress" => $::facts[networking][mac],
   }
 
   # configuration of hosts file. 
   $hosts_params = {
-    $hostname  => $::facts[networking][hostname],
-    $fqdn      => $::facts[networking][fqdn],
-    $ipaddress => $::facts[networking][ip]
+    "hostname"  => $::facts[networking][hostname],
+    "fqdn"      => $::facts[networking][fqdn],
+    "ipaddress" => $::facts[networking][ip],
   }
 
   $ip_output    = epp('networking/50-cloud-init.yaml.epp', $ip_params)
