@@ -23,8 +23,12 @@ Hardware:       Dell Optiplex 7010
     FUNCTION:       Pi-hole
     IP:             192.168.50.128
 
-NAME:           DESKTOP-MMLOEAS
-FUNCTION:       Primary workstation. 
-Hardware:       MG-VCP15A-3070
+    NAME:           dionysus-main
+    FUNCTION:       plex
+    IP:             192.168.50.130
+
+NAME:           DESKTOP-MMLOEAS /n
+FUNCTION:       Primary workstation /n
+Hardware:       MG-VCP15A-3070 /n
 
 
