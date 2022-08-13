@@ -7,7 +7,7 @@ String $ipaddress
 # This file will be managed by Puppet going forward
 # no change made to this file will be permanent.
 
-<%= $ipaddress -%> <% \s -%> <%= $fqdn -%>  <%= $hostname %> 
+<%= $ipaddress -%> <%# \s -%> <%= $fqdn -%>  <%= $hostname %> 
 127.0.0.1 localhost
 
 # The following lines are desirable for IPv6 capable hosts
