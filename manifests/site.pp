@@ -9,6 +9,10 @@ node "dionysus-main.local" {
     include networking
 }
 
+nodee "geppetto-main.local" {
+    include networking
+}
+
 # setting a default node.
 node "default" {
     include networking
