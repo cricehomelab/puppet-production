@@ -18,9 +18,5 @@ class plex {
     provider => shell,
     creates  => $plexlocation,
     require  => File[$plexinstallscriptlocation],    
-  }
-  # ensure the service stays running
-  service {'plexmediaserver':
-    ensure => running,
-  }
+  }  
 }
