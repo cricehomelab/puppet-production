@@ -42,6 +42,9 @@ Phase 1:
                 - started with a 500GB drive on the plex server this is for a test mostly. I want to probably scap and rebuild once I have a better plan on 
                 deploying this with more space. 
         - Challenges:
+            - removing plex from master branch.
+                1. Not open source.
+                2. jellyfin is open source and free. 
 
 
 
