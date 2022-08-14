@@ -6,7 +6,7 @@ node "janus-main.local" {
 }
 
 node "dionysus-main.local" {
-    include plex
+    #include plex  # looking into Jellyfin as it is fully open source. 
     include networking
 }
 
