@@ -2,7 +2,13 @@ Current Plan.
 
 Phase 1: 
 1. Puppet will install/build any system we can. 
-    - Reasoning: To learn how to use puppet better. This is used a lot at work and I'd like to be able to use it better. 
+    - Reasoning:  To learn how to use puppet better. This is used a lot at work and I'd like to be able to use it better. 
+    - Challenges: The biggest challenge so far was migrating domains, on the bright side i should not need to do that again. 
+                  The thing about the migration that was nice is that once the VM was re-configured there was little to no code tinkering to get the 
+                  rest of the infrastructure to work. 
+    - Results:    Installed Pihole unattended
+                  Managing IP configuration to set DNS
+                  Managing hosts file to ensure the hosts are correct. 
 2. PiHole install.
     - Reasoning:  Pihole has a widely used community I know I am not the first person to want to automate the installation of it. 
     - Challenges: Figuring out how the unattended install worked was my first hurdle. 
@@ -13,13 +19,29 @@ Phase 1:
                   commited to code. 
     - Future:     I am looking into if there are any post install changes I might like to make, and if possible I would like to make them with puppet rather than the pihole 
                   dashboard. 
+    - Results:    Pihole is up and running as the DNS of my lab. 
+                  It is not the DNS of the home network yet I want to run with it as my daily DNS for a few weeks on my computer to work out any kinks and to give it a "pilot".
+                  Pihole can be used to handle my hosts maintenance so my VMS can communicate as they need to. I have to do a little bit extra to get puppet to pick up initially
+                  but after that its very helpful. 
 3. add a proper domain. 
     - Reasoning: I would sort of like to do this before this becomes inconveniant to do. 2 machines is better than more, with Pihole set up as DNS now I can enforce my other devices
     to use Pihole as DNS and configure the hosts for the pihole. 
     - Challenges: Adding a proper domain was not bad, but it was time consuming as I ended up having to rebuiild my puppet and pihole servers. It was significantly less time 
                   consuming with having most of the config written as code. This also allowed for me to write a module around the networking needs in the lab. The nice thing 
                   is that now that this is set it will be unlikely that I will need to do this again. 
-4. 
+4. Plex server
+    - Reasonsing: This is another self-hosting service that has a lot of documentation for it. So getting this set up should be doable.
+    - Planning: 
+        - Needs: 
+            - VM - CREATED
+            - deployment plan - IN PROGRESS 
+                - going to install this from puppet. 
+                - need to write module up and get it running on the VM. 
+            - Future Considerations:
+                - Need More space. Will need to store a good chunk of media need to figure out how to store it and access it from plex. 
+                - started with a 500GB drive on the plex server this is for a test mostly. I want to probably scap and rebuild once I have a better plan on 
+                deploying this with more space. 
+        - Challenges:
 
 
-Phase 2:
+

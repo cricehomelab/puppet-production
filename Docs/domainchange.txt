@@ -27,4 +27,4 @@ Pihole was quickly configured and I learned how to manipulate the hosts table to
 Lessons learned:
 1. The more that I can commit to a code base the easier it is to recover.
 2. Changing domains on existing servers is time consuming.
-    A. I'm actively trying to plan my infrastucture so that I don't have to worry about this again if the need arrises. 
+    A. I'm actively trying to plan my infrastucture so that I don't have to worry about this again if the need arises. 
