@@ -7,21 +7,20 @@ class plex {
   #files to service to machine
   $plexinstallscript = 'puppet:///modules/plex/plexinstall.sh'
 
+  # stage install script on server. 
   file { $plexinstallscriptlocation :
     ensure => present,
     source => $plexinstallscript,
   }
-
+  # unattended install
   exec { 'installplex' :
     command  => 'sh /tmp/plexinstall.sh',
     provider => shell,
     creates  => $plexlocation,
     require  => $plexinstallscriptlocation,    
   }
-
+  # ensure the service stays running
   service {'plexmediaserver':
     ensure => running,
   }
-
-
 }
