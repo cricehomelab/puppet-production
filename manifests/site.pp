@@ -6,6 +6,7 @@ node "janus-main.local" {
 }
 
 node "dionysus-main.local" {
+    include plex
     include networking
 }
 
