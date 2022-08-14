@@ -42,6 +42,10 @@ Phase 1:
                 - started with a 500GB drive on the plex server this is for a test mostly. I want to probably scap and rebuild once I have a better plan on 
                 deploying this with more space. 
         - Challenges:
+                - I've decided to scrap the idea for a plex server for a few reasons.
+                    1. Plex is not open source. I'd like to self-host with opensource products.
+                    2. Jellyfin is an opensource platfor that has a pretty decent reputation. 
+                    3. 
 
 
 
