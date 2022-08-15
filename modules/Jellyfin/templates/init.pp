@@ -1,4 +1,4 @@
-class Jellyfin {
+class jellyfin {
   service { 'jellyfin':
     ensure => running,
   } 
