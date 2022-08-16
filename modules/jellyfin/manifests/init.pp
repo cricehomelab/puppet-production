@@ -1,5 +1,5 @@
 class jellyfin {
-  $scriptinstallsource = 'puppet:///jellyfin/modules/jellyfininstallrequirements.sh'
+  $scriptinstallsource = 'puppet:///jellyfin/modules/jellyfin/jellyfininstallrequirements.sh'
   $prerequisiteinstall = '/tmp/jellyfininstallrequirements.sh'
   
    
