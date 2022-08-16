@@ -26,7 +26,7 @@ Hardware:       Dell Optiplex 7010
     STATUS:         Live
 
     NAME:           dionysus-main
-    FUNCTION:       plex
+    FUNCTION:       Jelllyfin
     IP:             192.168.50.130
     STATUS:         in progress
 
