@@ -1,0 +1,31 @@
+1. Ensure the old jellyfin.list is not present:
+    rm /etc/apt/sources.list.d/jellyfin.list
+2. Install httpw transport
+    apt install apt-transport-https
+3. Enable Universe repository
+    add-apt-repository universe
+4. Import the GPG signing key
+    curl -fsSL https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/debian-jellyfin.gpg
+5. Add a repository configuration for the new jellyfin.list
+    echo "deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/ubuntu $( lsb_release -c -s ) main" | sudo tee /etc/apt/sources.list.d/jellyfin.list
+6. update apt.
+    apt update
+7. Install jellyfin
+    apt install jellyfin
+
+Plan to accomplish this...
+
+1. Need to do an exec that will do part 1 only if Jellyfin is not installed. 
+    rm /etc/apt/sources.list.d/jellyfin.list
+
+If step 1 is done this should kick off a cascade of steps
+    
+2. A package to install https transport
+        apt install apt-transport-https
+3. Exec as a script to run the remaining commands
+        add-apt-repository universe
+        curl -fsSL https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/debian-jellyfin.gpg
+        echo "deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/ubuntu $( lsb_release -c -s ) main" | sudo tee /etc/apt/sources.list.d/jellyfin.list
+        apt update
+4. A package to install Jellyfin. 
+
