@@ -1,6 +1,6 @@
 class jellyfin {
-  $scriptinstallsource = 'puppet:///jellyfin/modules/jellyfin/jellyfininstallrequirements.sh'
-  $prerequisiteinstall = '/tmp/jellyfininstallrequirements.sh'
+  $scriptinstallsource = 'puppet:///jellyfin/modules/jellyfin/installrequirements.sh'
+  $prerequisiteinstall = '/tmp/installrequirements.sh'
   
    
   # first requirement
@@ -15,7 +15,7 @@ class jellyfin {
   }
   # running the install script
   exec { 'install-prerequisite-command':
-    command  => 'sh /tmp/jellyfininstallrequirements.sh',
+    command  => 'sh /tmp/installrequirements.sh',
     provider => shell,
     creates  => '/etc/apt/sources.list.d/jellyfin.list',
     require  => File[$prerequisiteinstall],
