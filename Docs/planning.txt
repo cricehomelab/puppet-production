@@ -29,8 +29,9 @@ Phase 1:
     - Challenges: Adding a proper domain was not bad, but it was time consuming as I ended up having to rebuiild my puppet and pihole servers. It was significantly less time 
                   consuming with having most of the config written as code. This also allowed for me to write a module around the networking needs in the lab. The nice thing 
                   is that now that this is set it will be unlikely that I will need to do this again. 
+********* Start REMOVED THIS ****************
 4. Plex server
-    - Reasonsing: This is another self-hosting service that has a lot of documentation for it. So getting this set up should be doable.
+    - Reasoning: This is another self-hosting service that has a lot of documentation for it. So getting this set up should be doable.
     - Planning: 
         - Needs: 
             - VM - CREATED
@@ -45,6 +46,22 @@ Phase 1:
             - removing plex from master branch.
                 1. Not open source.
                 2. jellyfin is open source and free. 
+********* END REMOVED THIS ****************
 
+5 Jellyfin server 
+    - Reasoning: Self hosted service that I can and did set up in lieu of using plex. I decided to do this instead because the paid features of plex,
+    while not wrong, were not what I wanted to deal with. As a result I'd like to go the Jellyfin route and have a few more options with something
+    firmly in opensource. 
+    - Planning: Current status is in testing. I was able to get this installed manually but I would like to try again with my final product from puppet. 
+    I don't think this would be too difficult to do. Just need to read the install document a little more carefully and script a with some more first hand
+    knowledge.
+    - Challenges: 
+        -I need to figure out how to backup/burn my dvd collection to a digital format. There seem to be a few options for this but I'm not sure which way to 
+        go with it. 
+        - script the install for a better process my first attempt at this was flawed as I had never tried to install it manually before. there is also custom
+        instructions for ubuntu with this. I should be able to outline this better and maybe make a few more attempts at this. 
+        - extra storage. Will need to figure out a way to make more storeage and add more over time. current server does not have a lot of drive availablilty.
+        - Between both of these challenges we should have a bit of work cutout for me. 
+    
 
 
