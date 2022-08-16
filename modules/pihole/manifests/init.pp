@@ -13,7 +13,7 @@ class pihole {
   # Puppet file locations for pushing files down to pihole
   $piholeinstallscriptlocation = 'puppet:///modules/pihole/install-pihole.sh'
   $piholednsrecordlocation     = 'puppet:///modules/pihole/custom.list'
-  $piholednsmasqlocation      = 'puppet:///modules/pihole/99-edns.conf'
+  $piholednsmasqlocation       = 'puppet:///modules/pihole/99-edns.conf'
 
   # rendering template for config file
   # note this seems to get changed when I attempt to set the password on installation. 
