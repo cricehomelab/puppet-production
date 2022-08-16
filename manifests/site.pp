@@ -6,7 +6,7 @@ node "janus-main.local" {
 }
 
 node "dionysus-main.local" {    
-#    include jellyfin 
+    include jellyfin 
     include networking
 }
 
