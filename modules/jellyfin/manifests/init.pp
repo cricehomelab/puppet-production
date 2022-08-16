@@ -1,7 +1,5 @@
-class jellyfin {
-  $scriptinstallsource = 'puppet:///jellyfin/modules/jellyfin/installrequirements.sh'
-  $prerequisiteinstall = '/tmp/installrequirements.sh'
-  
+class jellyfin {  
+  $prerequisiteinstall = '/tmp/installrequirements.sh'  
    
   # first requirement
   package { 'apt-transport-https':
@@ -10,7 +8,7 @@ class jellyfin {
   # staging install script
   file { $prerequisiteinstall :
     ensure => present,
-    source => $scriptinstallsource,
+    source => 'puppet:///jellyfin/modules/jellyfin/installrequirements.sh',
     require => Package['apt-transport-https'],
   }
   # running the install script
