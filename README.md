@@ -13,7 +13,7 @@ Current functionality.
 
 NAME:           pve1
 Function:       PROXMOX HYPERVISOR
-Hardware:       Dell Optiplex 7010
+Hardware:       Dell Optiplex 7010 32GB RAM
 
     NAME:           geppetto-main
     FUNCTION:       Puppetmaster
@@ -26,7 +26,7 @@ Hardware:       Dell Optiplex 7010
     STATUS:         Live
 
     NAME:           dionysus-main
-    FUNCTION:       Jelllyfin
+    FUNCTION:       Jellyfin
     IP:             192.168.50.130
     STATUS:         in progress
 
