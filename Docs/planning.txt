@@ -29,7 +29,7 @@ Phase 1:
     - Challenges: Adding a proper domain was not bad, but it was time consuming as I ended up having to rebuiild my puppet and pihole servers. It was significantly less time 
                   consuming with having most of the config written as code. This also allowed for me to write a module around the networking needs in the lab. The nice thing 
                   is that now that this is set it will be unlikely that I will need to do this again. 
-********* Start REMOVED THIS ****************
+*********** Start REMOVED THIS FROM LAB ****************
 4. Plex server
     - Reasoning: This is another self-hosting service that has a lot of documentation for it. So getting this set up should be doable.
     - Planning: 
@@ -46,7 +46,7 @@ Phase 1:
             - removing plex from master branch.
                 1. Not open source.
                 2. jellyfin is open source and free. 
-********* END REMOVED THIS ****************
+*********** END REMOVED THIS FROM LAB *****************
 
 5 Jellyfin server 
     - Reasoning: Self hosted service that I can and did set up in lieu of using plex. I decided to do this instead because the paid features of plex,
@@ -62,6 +62,10 @@ Phase 1:
         instructions for ubuntu with this. I should be able to outline this better and maybe make a few more attempts at this. 
         - extra storage. Will need to figure out a way to make more storeage and add more over time. current server does not have a lot of drive availablilty.
         - Between both of these challenges we should have a bit of work cutout for me. 
+    - Results:
+        - Jellyfin module works up to installation of jellyfin, and ensures that it is running but my current server already has jellyfin installed so I have not 
+        run that part of the script yet. I think i do want to try that before i start putting media on it just to be sure I can get Jellyfin installed programmatically. 
+
     
 
 
