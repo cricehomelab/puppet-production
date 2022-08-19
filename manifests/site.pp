@@ -8,6 +8,7 @@ node "janus-main.local" {
 node "dionysus-main.local" {    
     include jellyfin 
     include networking
+    include disks
 }
 
 # setting a default node.
