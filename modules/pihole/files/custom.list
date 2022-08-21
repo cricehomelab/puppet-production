@@ -1,3 +1,4 @@
 192.168.50.127 puppet.ricehomelab.net
-192.168.50.128 pihole.ricehomelab.net
 192.168.50.130 jellyfin.ricehomelab.net
+192.168.50.131 pihole2.ricehomelab.net
+192.168.50.128 pihole.ricehomelab.net
