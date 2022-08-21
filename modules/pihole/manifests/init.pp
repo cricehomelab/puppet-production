@@ -47,12 +47,12 @@ class pihole {
     creates  => '/usr/local/bin/pihole',   
     require  => File[$piholeinstallscript, $piholeconfigfile],
   }
-#  Not working: this is supposed to update my DNS records for me but is not at the moment. 
-#  file { $piholednsrecords :
-#    ensure => present,
-#    source => $piholednsrecordlocation,
-#    require => Exec['install-command'],
-#  }
+
+  file { $piholednsrecords :
+    ensure => present,
+    source => $piholednsrecordlocation,
+    require => Exec['install-command'],
+  }
   file { $piholednsmasq :
     ensure  => absent,
     content => $piholednsmasqlocation,
