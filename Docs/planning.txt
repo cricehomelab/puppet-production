@@ -65,6 +65,27 @@ Phase 1:
     - Results:
         - Jellyfin module works up to installation of jellyfin, and ensures that it is running but my current server already has jellyfin installed so I have not 
         run that part of the script yet. I think i do want to try that before i start putting media on it just to be sure I can get Jellyfin installed programmatically. 
+        - Install of Jellyfin has been wildly successful all tests are going as I would expect them to. I am importing a number of DVDs onto the server with the intention of 
+        importing a fairly large library by the time i am done. 
+
+PHASE 2:
+
+I've been able to implement a few things Now I'd like to start working on observability and logging and redundancy.
+
+1. Set up a second pihole instance to work as DNS. (done)
+2. Set up PuppetDB on a new VM. 
+3. Set up a logging visualization application
+       Need to evaluate what the best is for my purposes
+           -Graphna
+           -Elastic
+           -Prometheus
+4. Start working towards high availability. need 2 more proxmox instances. 
+5. BBU. Need small one upstairs for internet. Larger one for downstairs. 
+6. Need to start researching a reverse proxy and what I will need to set up in the cloud to get jellyfin set up for use.
+7. Consider a better router. I'm a bit concerned this router won't do well if i start opening ports. Its older and I'm a bit worried about security on a more open router. 
+    -pfSense
+    -opnSense
+    -something else?
 
     
 

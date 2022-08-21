@@ -28,7 +28,12 @@ Hardware:       Dell Optiplex 7010 32GB RAM
     NAME:           dionysus-main
     FUNCTION:       Jellyfin
     IP:             192.168.50.130
-    STATUS:         in progress
+    STATUS:         live
+
+    NAME:           iana-main
+    FUNCTION:       Secondary Pihole (2ndary DNS)
+    IP:             192.168.50.131
+    STATUS:         live
 
 
 
