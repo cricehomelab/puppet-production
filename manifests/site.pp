@@ -1,6 +1,7 @@
 
 # this node is for pihole. 
-node "janus-main.local" {
+
+node 'janus-main.local', 'iana-main.local' {
     include pihole
     include networking
 }
