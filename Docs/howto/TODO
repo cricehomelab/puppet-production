@@ -1,0 +1,7 @@
+1. Set up a weekly reboot for instances. 
+    A. Do different pihole instances on different dates.
+    B. Do Jellyfin after 3AM on a weekday.
+2. Need to figure out how to update pihole if there is an upgrade available
+    A. Ideally Schedule it during a time that is convenient and won't overlap with both devices updating at the same time. 
+3. Logging. 
+4. Alerting.
