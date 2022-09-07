@@ -87,6 +87,10 @@ I've been able to implement a few things Now I'd like to start working on observ
     -opnSense
     -something else?
 
+Phase 2 surprises: I found that i dont have a way to reboot my devices to install security patches when its needed. Currently working on building a sandbox 
+device to test a reboot solution. Marked down in todo list. 
+
+
 
 
    

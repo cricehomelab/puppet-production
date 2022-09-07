@@ -11,6 +11,10 @@ node "dionysus-main.local" {
     include disks
 }
 
+node "preprodtest"{
+    include networking
+}
+
 # setting a default node.
 node "default" {
     include networking
