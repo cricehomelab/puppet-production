@@ -22,6 +22,4 @@ class updates {
   reboot {'after' :
     subscribe exec ['apt-get update && apt-get upgrade'],
   }
-
-
 }
