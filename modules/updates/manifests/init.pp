@@ -25,7 +25,7 @@ class updates {
   }
   # update pihole regularly. 
   exec {'pihole -up' :
-    schedule => [pihole_update],
+    schedule => ['pihole_update'],
     provider => shell,
   }    
   # weekly command to run updates. 
