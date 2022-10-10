@@ -2,8 +2,7 @@
 # this node is for pihole. 
 node 'janus-main.local', 'iana-main.local' {
     include pihole
-    include networking
-    include updates
+    include networking    
 }
 
 node "dionysus-main.local" {    
