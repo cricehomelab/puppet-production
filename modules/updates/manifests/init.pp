@@ -1,6 +1,6 @@
 class updates {
   $restart_group_1 = 'janus-main', 'dionysus-main'
-  $restart_group_2 = 'iana-main', 
+  $restart_group_2 = 'iana-main', 'preprodtest'
   $dns_group = 'iana-main', 'janus-main'  
   if $::facts['hostname'] in $dns_group {
     schedule { 'pihole_update' :
