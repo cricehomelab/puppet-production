@@ -53,6 +53,7 @@ class pihole {
     source => $piholednsrecordlocation,
     require => Exec['install-command'],
   }
+  
   file { $piholednsmasq :
     ensure  => absent,
     content => $piholednsmasqlocation,
