@@ -1,7 +1,6 @@
 class updates {
   $restart_group_1 = ['janus-main', 'dionysus-main']
-  $restart_group_2 = ['iana-main', 'preprodtest']
-  $dns_group = ['iana-main', 'janus-main']  
+  $restart_group_2 = ['iana-main', 'preprodtest'] 
   if $::facts['hostname'] in $dns_group {
     schedule { 'pihole_update' :
       period => weekly,
@@ -22,12 +21,7 @@ class updates {
       range  => "1:00 - 3:00",
       repeat => 1,
     }
-  }
-  # update pihole regularly. 
-  exec {'pihole -up' :
-    schedule => ['pihole_update'],
-    provider => shell,
-  }    
+  }   
   # weekly command to run updates. 
   exec {'apt-get update && apt-get upgrade' :
     schedule => ['group1updates', 'group2updates'],
