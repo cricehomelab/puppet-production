@@ -4,7 +4,7 @@ In Progress:
 1. Set up a weekly reboot for instances. 
     A. Do different pihole instances on different dates.
     B. Do Jellyfin after 3AM on a weekday.
-Note: I have this set up but I need to test this with a sandbox first. building sandbox device to be my test client. 
+
 
 
 TODO: 
@@ -15,4 +15,3 @@ TODO:
     B. Splunk/Graphna/Elk Stack logging. 
 4. Alerting.
 5. Need one more host can be SFF to do HA and have consensus. 
-6. 
