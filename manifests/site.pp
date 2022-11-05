@@ -3,17 +3,22 @@
 node 'janus-main.local', 'iana-main.local' {
     include pihole
     include networking    
-    #include updates
+    include updates
 }
 
 node "dionysus-main.local" {    
     include jellyfin 
     include networking
-    include disks    
+    include disks
+    include updates    
 }
 
 node "preprodtest"{
     include networking    
+}
+
+node "geppetto-main" {
+    include updates
 }
 
 # setting a default node.
