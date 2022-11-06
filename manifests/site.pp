@@ -17,7 +17,7 @@ node "preprodtest"{
     include networking    
 }
 
-node "geppetto-main" {
+node "geppetto-main.local" {
 #    include updates
      include reposync
 }
