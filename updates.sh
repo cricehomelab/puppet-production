@@ -16,6 +16,7 @@ echo "$dt running updates and rebooting machine." >> $Logfile
 apt update
 apt upgrade
 
-echo "update finished sending weekly reboot" >> $Logfile
+dt=$(date '+%d/%m/%Y %H:%M:%S');
+echo "$dt update finished sending weekly reboot" >> $Logfile
 
 reboot
