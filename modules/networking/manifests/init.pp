@@ -27,10 +27,10 @@ class networking {
   # Part1: setting DNS correctly for device.
   file { $ip_config_file :
     ensure  => present,
-    content => $ip_output,  
+    content => $ip_output,
   }
 
-  # Part2: applying IP correctly. 
+  # Part2: applying IP correctly.
   exec { 'netplan_application':
     command     => 'netplan apply',
     provider    => shell,

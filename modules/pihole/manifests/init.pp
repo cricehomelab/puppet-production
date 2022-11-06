@@ -5,8 +5,8 @@ class pihole {
   
   # file paths on my pihole i am using. 
   $piholeinstallscript         = '/tmp/install-pihole.sh'
-  $piholedirectory             = '/etc/pihole/'   
-  $piholeconfigfile            = '/etc/pihole/setupVars.conf'  
+  $piholedirectory             = '/etc/pihole/'
+  $piholeconfigfile            = '/etc/pihole/setupVars.conf'
   $piholednsrecords            = '/etc/pihole/custom.list'
   $piholednsmasq               = '/etc/dnsmasq.d/99-edns.conf'
 
@@ -22,7 +22,7 @@ class pihole {
   $params = {'password' => $::facts[pihole]}
   $output = epp('pihole/setupVars.conf.epp', $params)
 
-  # script to run the installer. 
+  # script to run the installer.
   file { $piholeinstallscript :
     ensure => present,
     source => $piholeinstallscriptlocation,
@@ -34,17 +34,17 @@ class pihole {
   }
 
   # Copy down config file. need to make this part better. 
-  file { $piholeconfigfile : 
+  file { $piholeconfigfile :
     ensure   => present,
     # content  => $output,  # uncomment for reinstall
     require  => File[$piholedirectory],
   }
 
-  # Execution of the install script. 
-  exec { 'install-command' :    
+  # Execution of the install script.
+  exec { 'install-command' :
     command  => 'sh /tmp/install-pihole.sh',
-    provider => shell, 
-    creates  => '/usr/local/bin/pihole',   
+    provider => shell,
+    creates  => '/usr/local/bin/pihole',
     require  => File[$piholeinstallscript, $piholeconfigfile],
   }
 

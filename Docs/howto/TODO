@@ -1,11 +1,12 @@
 DONE:
 
 In Progress:
-1. Set up a weekly reboot for instances. 
+1. Set up a weekly reboot for instances.
     A. Do different pihole instances on different dates.
+        a. I have my pihole instances set to update and reboot with a puppet managed cronjob that runs a basic shell script.
     B. Do Jellyfin after 3AM on a weekday.
-    C. Waiting to see if this works. .
-2. Logging Setting up PuppetDB. Will work on getting a logging solution after that. 
+        a. Once I am able to confirm this works on pihole will implement this on the other devices.
+2. I am working on spinning up a server for lab logging.
 
 
 
@@ -13,4 +14,4 @@ TODO:
 2. Need to figure out how to update pihole if there is an upgrade available
     A. Ideally Schedule it during a time that is convenient and won't overlap with both devices updating at the same time.
 4. Alerting.
-5. Need one more host can be SFF to do HA and have consensus. 
+5. Need one more host can be SFF to do HA and have consensus.
