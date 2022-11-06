@@ -19,6 +19,7 @@ node "preprodtest"{
 
 node "geppetto-main" {
 #    include updates
+     include reposync
 }
 
 # setting a default node.
