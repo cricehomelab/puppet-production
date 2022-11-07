@@ -13,7 +13,7 @@ class reposync {
     minute  => '*/5',
   }
 
-  file {'/etc/logrotate.sh' :
+  file {'/etc/scripts/logrotate.sh' :
     ensure => file,
     source => 'puppet:///modules/reposync/logrotate.sh'
   }
