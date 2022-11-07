@@ -19,7 +19,7 @@ class reposync {
   }
 
   cron { 'logrotate' :
-    command => 'sh /etc/logrotate.sh',
+    command => 'sh /etc/scripts/logrotate.sh',
     user    => root,
     hour    => 23,
     minute  => 59,
