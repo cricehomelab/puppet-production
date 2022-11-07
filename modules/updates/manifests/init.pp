@@ -1,7 +1,7 @@
 class updates {
-  file { '/etc/scripts' :
-    ensure => directory,
-  }
+#  file { '/etc/scripts' :
+#    ensure => directory,
+#  }
 
   file { '/tmp/logs' :
     ensuyre => directory,
