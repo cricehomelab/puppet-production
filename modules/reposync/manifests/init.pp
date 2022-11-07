@@ -1,6 +1,11 @@
 class reposync {
+  file { '/etc/scripts/puppet-reposync.sh' :
+    ensure => present,
+    source => 'puppet:///modules/reposync/puppet-reposync.sh',
+
+  }
   cron { 'reposync' :
-    command => 'sh /etc/puppetlabs/code/environments/production/puppet-reposync.sh',
+    command => 'sh /etc/scripts/puppet-reposync.sh',
     user    => 'root',
     minute  => '*/5',
   }
