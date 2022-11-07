@@ -4,7 +4,7 @@ class updates {
   }
 
   file { '/tmp/logs' :
-    ensuyre => directory,
+    ensure => directory,
   }
 
   file { '/etc/scripts/updates.sh' :
