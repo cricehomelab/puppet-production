@@ -14,8 +14,7 @@ fi
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "UPDATE - $dt running updates and rebooting machine." >> $Logfile
 
-apt update
-apt upgrade
+apt update && apt upgrade -y
 
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "REBOOT - $dt update finished sending weekly reboot" >> $Logfile

@@ -10,7 +10,7 @@ node "dionysus-main.local" {
     include jellyfin 
     include networking
     include disks
-#    include updates
+    include updates
 }
 
 node "preprodtest"{
@@ -18,7 +18,7 @@ node "preprodtest"{
 }
 
 node "geppetto-main.local" {
-#    include updates
+    include updates
     include reposync
 
 }
