@@ -1,7 +1,7 @@
 #! bash.sh
 
 # ensure a file is present to log
-Logfile=/home/charlie/puppetlog
+Logfile=/tmp/logs/puppetlog
 if test -f "$Logfile";
 then
     echo "$Logfile exists"

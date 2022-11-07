@@ -10,6 +10,7 @@ else
     touch $Logfile
 fi
 
+
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "UPDATE - $dt running updates and rebooting machine." >> $Logfile
 
