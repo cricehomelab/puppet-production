@@ -3,10 +3,6 @@ class reposync {
     ensure => directory,
   }
 
-  file { '/tmp/logs' :
-    ensure => directory,
-  }
-
   file { '/etc/scripts/puppet-reposync.sh' :
     ensure => present,
     source => 'puppet:///modules/reposync/puppet-reposync.sh',
