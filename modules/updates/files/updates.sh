@@ -1,6 +1,6 @@
 #! bash.sh
 
-Logfile=/home/charlie/updatelog
+Logfile=/tmp/logs/updatelog
 
 # ensuring log file is present.
 if test -f "$Logfile";
