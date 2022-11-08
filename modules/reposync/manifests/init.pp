@@ -1,7 +1,4 @@
 class reposync {
-  file { '/etc/scripts' :
-    ensure => directory,
-  }
 
   file { '/etc/scripts/puppet-reposync.sh' :
     ensure => present,
