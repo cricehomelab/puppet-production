@@ -5,7 +5,7 @@ class updates {
 
   file { '/etc/needrestart/needrestart.conf' :
     ensure => file,
-    contents => 'puppet:///modules/updates/needrestart.conf',
+    source => 'puppet:///modules/updates/needrestart.conf',
   }
 
   file { '/tmp/logs' :
