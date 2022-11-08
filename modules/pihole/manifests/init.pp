@@ -53,9 +53,15 @@ class pihole {
     source => $piholednsrecordlocation,
     require => Exec['install-command'],
   }
-  
+
   file { $piholednsmasq :
     ensure  => absent,
     content => $piholednsmasqlocation,
-  } 
+  }
+
+  cron { 'pihole_update' :
+    command => 'pihole -up',
+    weekday => 'Tuesday',
+  }
+
 }

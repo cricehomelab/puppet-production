@@ -1,14 +1,13 @@
 DONE:
+1. Set up a weekly reboot for instances.
+    A. Reboot and updates work as a script.
+    B. Had to make some changes to allow for unnattended updates.
+    C. tested script on all hosts. It works. Will need to see if reboots work next monday.
+
 
 In Progress:
-1. Set up a weekly reboot for instances.
-    A. Do different pihole instances on different dates.
-        a. I have my pihole instances set to update and reboot with a puppet managed cronjob that runs a basic shell script.
-    B. Do Jellyfin after 3AM on a weekday.
-        a. Once I am able to confirm this works on pihole will implement this on the other devices.
-2. I am working on spinning up a server for lab logging.
 
-
+1. I am working on spinning up a server for lab logging.
 
 TODO: 
 2. Need to figure out how to update pihole if there is an upgrade available
