@@ -3,6 +3,11 @@ class updates {
     ensure => directory,
   }
 
+  file { '/etc/needrestart/needrestart.conf' :
+    ensure => file,
+    contents => 'puppet:///modules/updates/needrestart.conf',
+  }
+
   file { '/tmp/logs' :
     ensure => directory,
   }
