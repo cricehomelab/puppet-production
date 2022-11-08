@@ -63,5 +63,4 @@ class pihole {
     command => 'pihole -up',
     weekday => 'Tuesday',
   }
-
 }
