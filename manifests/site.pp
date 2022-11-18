@@ -24,6 +24,10 @@ node "geppetto-main.local" {
 }
 
 # setting a default node.
+node "seshat-main.local" {
+    include networking
+}
+
 node "default" {
     include networking
 }
