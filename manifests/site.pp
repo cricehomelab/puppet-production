@@ -27,6 +27,7 @@ node "geppetto-main.local" {
 node "seshat-main.local" {
     include networking
     include updates
+    include logging
 }
 
 # setting a default node.
