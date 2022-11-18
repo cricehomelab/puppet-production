@@ -2,7 +2,7 @@ class logging {
   # Ensure Presence of script to install InfluxDB
   file { '/etc/scripts/installinflux.sh' : 
     ensure => present,
-    source => 'puppet:///module/logging/installinflux.sh',
+    source => 'puppet:///modules/logging/installinflux.sh',
   }
 
   # script to install influx db
