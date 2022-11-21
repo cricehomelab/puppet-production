@@ -18,4 +18,5 @@ systemctl daemon-reload
 systemctl start elasticsearch.service
 systemctl enable elasticsearch.service
 
+# final restart of service. 
 systmctl restart elasticsearch.service
