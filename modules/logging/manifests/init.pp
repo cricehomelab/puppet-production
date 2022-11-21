@@ -1,7 +1,7 @@
 class logging {
   file { '/etc/scripts/elk_server_install.sh' :
     ensure => present,
-    content => 'puppet:///modules/logging/elk_server_install.sh',    
+    content => 'puppet:///modules/logging/elkserverinstall.sh',
   }
 
   exec { 'sh /etc/scripts/elk_server_install.sh' :
