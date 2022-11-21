@@ -1,18 +1,37 @@
-Journal on creating logging server
-https://jeffdavis.dev/how-to-create-a-grafana-dashboard-for-your-homelab/
+There are a lot of logging options and no single solution seems perfect.
+I am settling on the idea of running an ELK stack to be my log aggregator
+we use it at work which will be a benefit, and it seems to be somewhat 
+analgous to Splunk. Splunk was removed from consideration because cost.
 
-Install InfluxDB
+I had considered using Grafana, but I think I would have a higher barrier
+to entry considering i know less about it than the other two.
 
+I think the only other possible contender would be Graylog, but I have yet 
+to investigate that path. ELK seems more used in the industry. 
 
-commands: 
-wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
-source /etc/lsb-release
-echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
-apt-get update && sudo apt-get install influxdb
-systemctl unmask influxdb.service
+This should be what is needed for installing on a server host. 
 
+link used to develop script.
+https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
 
-ensure the service is enabled and started.
+***SERVER INSTALL SCRIPT***
 
+# Requirements for install
+apt install zip unzip -y
+apt install jq -y
+apt install apt-transport-https -y
+
+# GnuPrivacyGuard (GPG) key
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+
+# install elasticsearch
+
+sudo apt-get update && sudo apt-get install elasticsearch > /home/charlie/elastisearchinfo.txt
+
+# reload known Daemons, start and enable elasticsearch
+systemctl daemon-reload
+systemctl start elasticsearch.service
+systemctl enable elasticsearch.service
 
 

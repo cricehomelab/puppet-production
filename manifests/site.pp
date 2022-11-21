@@ -1,37 +1,33 @@
 
 # this node is for pihole.
 node 'janus-main.local', 'iana-main.local' {
+    include updates
     include pihole
     include networking
-    include updates
 }
 
+# Jellyfin node
 node "dionysus-main.local" {
-    include jellyfin 
+    include updates
+    include jellyfin
     include networking
     include disks
-    include updates
-}
-
-node "preprodtest"{
-    include networking
 }
 
 node "geppetto-main.local" {
     include updates
     include reposync
-
 }
 
-# logging node. 
+# logging node.
 node "seshat-main.local" {
-    include networking
     include updates
+    include networking
     include logging
 }
 
 # setting a default node.
 node "default" {
-    include networking
     include updates
+    include networking
 }
