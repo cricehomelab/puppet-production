@@ -20,6 +20,7 @@ class updates {
   cron { 'weekly_updates' :
     command => 'sh /etc/scripts/updates.sh',
     weekday => 'Monday',
-    hour    => ['2'],
+    hour    => '2',
+    minute  => '15',
   }
 }
