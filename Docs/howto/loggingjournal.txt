@@ -11,6 +11,11 @@ to investigate that path. ELK seems more used in the industry.
 
 This should be what is needed for installing on a server host. 
 
+Link used to get full order for installation
+https://www.elastic.co/guide/en/elastic-stack/current/installing-elastic-stack.html
+
+
+1. Install Elasticsearch.
 link used to develop script.
 https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
 
@@ -35,3 +40,23 @@ systemctl start elasticsearch.service
 systemctl enable elasticsearch.service
 
 
+*** END SCRIPT ***
+2. Install Kibana
+
+***KIBANA INSTALL SCRIPT***
+
+#! bash.sh
+
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+sudo apt-get install apt-transport-https
+
+echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+
+sudo apt-get update && sudo apt-get install kibana
+
+bin/elasticsearch-create-enrollment-token -s kibana
+
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable kibana.service
+
+*** END SCRIPT ***

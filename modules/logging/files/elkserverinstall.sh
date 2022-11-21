@@ -20,3 +20,12 @@ systemctl enable elasticsearch.service
 
 # final restart of service. 
 systmctl restart elasticsearch.service
+
+sudo apt-get install apt-transport-https
+
+sudo apt-get update && sudo apt-get install kibana
+
+bin/elasticsearch-create-enrollment-token -s kibana
+
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable kibana.service
