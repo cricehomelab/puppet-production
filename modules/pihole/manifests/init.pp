@@ -49,7 +49,7 @@ class pihole {
   #   require  => File[$piholeinstallscript, $piholeconfigfile],
   # }
 # 
-  # file { $piholednsrecords :
+  file { $piholednsrecords :
     ensure => present,
     source => $piholednsrecordlocation,  
   }
