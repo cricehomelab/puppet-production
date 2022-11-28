@@ -1,0 +1,29 @@
+
+Quick retrospective notes on setting up 
+
+Install log stash on a host. 
+https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-installation-configuration.html
+
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.5.2-amd64.deb
+sudo dpkg -i filebeat-8.5.2-amd64.deb
+
+********
+need to pull this file over securely and not from my github. Maybe via SFTP? 
+need to put in a formated filebeat.yml
+
+/etc/filebeat/filebeat.yml
+
+********
+
+
+filebeat modules enable logstash
+
+modify the settings or drop a formatted file that enables logstash
+
+/etc/filebeat/modules.d/logstash.yml
+
+Rethinking what I'm doing here as I'm not really seeing the data I want here. Looking into seeing if we can pull this from puppetdb, 
+which will need to be installed. I'm thinking i can pull the data I'm used to seeing from splunk
+
+******SCRIPT******
+
