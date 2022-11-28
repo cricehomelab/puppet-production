@@ -7,6 +7,7 @@ class secretsync {
     ensure   => file,
     source   => 'puppet:///modules/secretsync/secretsync.sh',
     owner    => 'root',
+    mode     => '0600',
   }
 
   cron { 'secretsync' :
