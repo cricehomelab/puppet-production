@@ -28,13 +28,6 @@ class pihole {
     ensure => directory,
   }
 
-  # Copy down config file. need to make this part better. 
-  file { $piholeconfigfile :
-    ensure   => present,
-    content  => '/tmp/secrets/pihole/setupvars.conf',
-    require  => File[$piholedirectory],
-  }
-
   # Execution of the install script.
   exec { 'install-command' :
     command  => 'sh /tmp/install-pihole.sh',
