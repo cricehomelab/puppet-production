@@ -1,5 +1,5 @@
 class filebeats{
-  qservice {'filebeat' :
+  service {'filebeat' :
     ensure => started,
   }
 }
