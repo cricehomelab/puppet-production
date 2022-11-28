@@ -7,14 +7,9 @@ class secretsync {
     ensure   => file,
     source   => 'puppet:///modules/secretsync/secretsync.sh',
   }
-
-  file {
-    
-  }
-
+  
   cron { 'secretsync' :
     command => 'sh /tmp/secrets/secretsync.sh',
     minute  => '*/5',
   }
-
 }
