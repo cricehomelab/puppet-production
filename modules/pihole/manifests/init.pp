@@ -13,7 +13,7 @@ class pihole {
  
   # Puppet file locations for pushing files down to pihole
   $piholeinstallscriptlocation = 'puppet:///modules/pihole/install-pihole.sh'
-  $piholednsrecordlocation     = 'puppet:///module/pihole/custom.list' 
+  $piholednsrecordlocation     = 'puppet:///modules/pihole/custom.list' 
 
   #TODO stop using template going to clone this down from another source. 
 
