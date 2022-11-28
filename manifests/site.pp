@@ -2,6 +2,7 @@
 # this node is for pihole.
 node 'janus-main.local', 'iana-main.local' {
     include updates
+    include secretsync
     include pihole
     include networking
 }
@@ -31,3 +32,4 @@ node "default" {
     include updates
     include networking
 }
+
