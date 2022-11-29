@@ -15,7 +15,7 @@ class secretsync {
 
   exec { 'sh /tmp/secrets/git_init.sh' :
     provider => shell,
-    unless   => 'test -f /etc/pihole/setupvars.conf',
+    onlyif   => 'test -f /etc/pihole/setupvars.conf',
   }
 
   cron { 'secretsync' :
