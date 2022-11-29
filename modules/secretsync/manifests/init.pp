@@ -12,9 +12,9 @@ class secretsync {
     ensure => file,
     source => 'puppet:///modules/secretsync/git_init.sh',
   }
-  exec { 'init_git' :
-    command => 'sh /etc/secretes/git_init.sh',
-    unless  => 'test -f /etc/pihole/setupvars.conf',
+  exec { 'sh /etc/secretes/git_init.sh' :
+    provider => shell,
+    unless   => 'test -f /etc/pihole/setupvars.conf',
   }
 
   cron { 'secretsync' :
