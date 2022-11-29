@@ -1,5 +1,5 @@
 class secretsync {
-  file { '/tmp/secrets' :
+  file { '/tmp/secrets/' :
     ensure => directory,
   }
 
