@@ -18,7 +18,7 @@ ssh-add /home/charlie/.ssh/github
 
 # synchronize repo with puppetmaster server. 
 cd /tmp/secrets/
-git pull git@github.com:cricehomelab/puppet_secretrepo.git >> $Logfile
+git clone git@github.com:cricehomelab/puppet_secretrepo.git >> $Logfile
 
 if test -f "/etc/pihole/"
 then
