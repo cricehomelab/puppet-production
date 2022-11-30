@@ -25,3 +25,5 @@ if test -f "/etc/pihole/"
 then
     cp /tmp/secrets/pihole/setupvars.conf /etc/pihole/setupVars.conf
 fi
+
+rm -r /tmp/ssh-XXXXXX*
