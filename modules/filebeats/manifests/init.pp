@@ -8,7 +8,7 @@ class filebeats{
 
   exec { '/etc/scripts/install_filebeats.sh':
     provider => shell,
-    creates => '/etc/filebeats/filebeat.yml',
+    creates => '/etc/filebeat/filebeat.yml',
   }
 
   # state of service.
