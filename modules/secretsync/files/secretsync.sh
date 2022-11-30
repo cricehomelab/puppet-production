@@ -1,5 +1,7 @@
 #! bash.sh
 
+cd /tmp/secrets/
+
 # ensure a file is present to log
 Logfile=/tmp/logs/secretsync
 if test -f "$Logfile";
@@ -17,8 +19,7 @@ eval "$(ssh-agent -s)"
 ssh-add /home/charlie/.ssh/github
 
 # synchronize repo with puppetmaster server. 
-cd /tmp/secrets/clone
-git clone git@github.com:cricehomelab/puppet_secretrepo.git >> $Logfile
+git pull git@github.com:cricehomelab/puppet_secretrepo.git >> $Logfile
 
 if test -f "/etc/pihole/"
 then
