@@ -17,7 +17,7 @@ eval "$(ssh-agent -s)"
 ssh-add /home/charlie/.ssh/github
 
 # synchronize repo with puppetmaster server. 
-cd /tmp/secrets/
+cd /tmp/secrets/clone
 git clone git@github.com:cricehomelab/puppet_secretrepo.git >> $Logfile
 
 if test -f "/etc/pihole/"
