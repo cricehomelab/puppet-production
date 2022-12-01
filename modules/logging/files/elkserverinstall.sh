@@ -1,5 +1,7 @@
 #! bash.sh
 
+# may not work this was written while i installed manually. 
+
 # Requirements for install
 apt install zip unzip -y
 apt install jq -y

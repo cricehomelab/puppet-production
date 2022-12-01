@@ -43,6 +43,7 @@ systemctl enable elasticsearch.service
 *** END SCRIPT ***
 2. Install Kibana
 
+script untested as we did not use this to install was writing script as I working through this issue. 
 ***KIBANA INSTALL SCRIPT***
 
 #! bash.sh
@@ -60,3 +61,13 @@ sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable kibana.service
 
 *** END SCRIPT ***
+
+Install filebeat and configure nodes. 
+I cover this in the filebeats install.txt. 
+
+Need to install metricbeat and see what other things I might want to report to this. 
+
+Retrospective:
+Installing the Stack took a little longer than what I wanted to. I am not really surprised though. 
+The documentation on the self-hosting is pretty good but it was still pretty confusing. 
+I can understand why this is sold as a SaaS. I would buy it if i was doing it at enterprise levels. 

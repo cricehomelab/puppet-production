@@ -27,6 +27,8 @@ which will need to be installed. I'm thinking i can pull the data I'm used to se
 
 ******SCRIPT******
 
+#! bash.sh
+
 curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.5.2-amd64.deb
 sudo dpkg -i filebeat-8.5.2-amd64.deb
 
@@ -36,7 +38,7 @@ systemctl start filebeat
 
 filebeat modules enable logstash
 
-cp /tmp/secrets/filebeat/logstash.yml
+cp /tmp/secrets/filebeat/logstash.yml /etc/filebeat/modules.d/logstash.yml
 
 systemctl restart filebeat
 
