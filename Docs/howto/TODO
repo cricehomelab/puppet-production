@@ -3,14 +3,15 @@ DONE:
     A. Reboot and updates work as a script.
     B. Had to make some changes to allow for unnattended updates.
     C. tested script on all hosts. It works. Will need to see if reboots work next monday.
-
+2. Need to figure out how to update pihole if there is an upgrade available
+    A. Ideally Schedule it during a time that is convenient and won't overlap with both devices updating at the same time.
 
 In Progress:
 
-1. I am working on spinning up a server for lab logging.
+3. I am working on spinning up a server for lab logging.
+    A. Logging is in progress 2 nodes reporting at this time. 
 
 TODO: 
-2. Need to figure out how to update pihole if there is an upgrade available
-    A. Ideally Schedule it during a time that is convenient and won't overlap with both devices updating at the same time.
+
 4. Alerting.
 5. Need one more host can be SFF to do HA and have consensus.
