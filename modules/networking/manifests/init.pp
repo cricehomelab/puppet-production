@@ -1,4 +1,3 @@
-
 class networking {
   # filepaths to the files we are manipulating
   $hosts_file = '/etc/cloud/templates/hosts.debian.tmpl'

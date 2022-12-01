@@ -20,3 +20,4 @@ ssh-add /home/charlie/.ssh/github
 cd /etc/puppetlabs/code/environments/production/
 git pull git@github.com:cricehomelab/puppet-production.git >> $Logfile
 
+rm -r /tmp/ssh-XXXXXX*

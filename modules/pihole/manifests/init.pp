@@ -1,5 +1,4 @@
-class pihole {  
-  # REMOVE ROW OF COMMENTS TO INSTALL PIHOLE. 
+class pihole {   
   # need to create a conf file for unattended install https://discourse.pi-hole.net/t/what-is-setupvars-conf-and-how-do-i-use-it/3533
   # execute the installer script for pihole
   # ensure the service is started. 
@@ -10,12 +9,10 @@ class pihole {
   $piholeconfigfile            = '/etc/pihole/setupVars.conf'
   $piholednsrecords            = '/etc/pihole/custom.list'
   $piholednsmasq               = '/etc/dnsmasq.d/99-edns.conf'
- 
+
   # Puppet file locations for pushing files down to pihole
   $piholeinstallscriptlocation = 'puppet:///modules/pihole/install-pihole.sh'
   $piholednsrecordlocation     = 'puppet:///modules/pihole/custom.list' 
-
-  #TODO stop using template going to clone this down from another source. 
 
   # script to run the installer.
   file { $piholeinstallscript :
