@@ -1,9 +1,9 @@
 #! bash.sh
 
-cd /tmp/secrets/
+cd /tmp/secrets/puppet_secretrepo
 
 # ensure a file is present to log
-Logfile=/tmp/logs/secretsync/puppet_secretrepo
+Logfile=/tmp/logs/secretsync
 if test -f "$Logfile";
 then
     echo "$Logfile exists"
