@@ -3,7 +3,7 @@
 cd /tmp/secrets/
 
 # ensure a file is present to log
-Logfile=/tmp/logs/secretsync
+Logfile=/tmp/logs/secretsync/puppet_secretrepo
 if test -f "$Logfile";
 then
     echo "$Logfile exists"
