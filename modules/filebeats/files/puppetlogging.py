@@ -25,7 +25,7 @@ def get_last_run_info():
             line_to_log_1 += f'{lines[num + 5][0:-1]}'
             line_to_log_1 += f'{lines[num + 6][0:-1]}'
             line_to_log_1 += f'{lines[num + 7][0:-1]}'
-    line_to_return = f'{line_to_log_1}'
+    line_to_return = f'{line_to_log_1}\n'
     return line_to_return
 
 if __name__ == '__main__':
