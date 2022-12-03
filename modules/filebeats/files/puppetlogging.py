@@ -5,7 +5,7 @@ import hashlib
 
 def check_file():
     output_file = r'/tmp/logs/puppet_run_summary.log'
-    with open(output_file, 'w') as f:
+    with open(output_file, 'a') as f:
         f.write(get_last_run_info())
 
 def get_last_run_info():
