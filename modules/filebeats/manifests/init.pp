@@ -28,7 +28,6 @@ class filebeats{
     ensure => present,
     source => 'puppet:///modules/filebeats/puppetlogging.py',
     owner  => 'root',
-
   }
 
   # cron job to run this script every 29 minutes. Just under the run time for puppet. 
