@@ -1,6 +1,7 @@
 from os.path import exists
 import re
 from datetime import datetime
+import hashlib
 
 def check_file():
     output_file = r'/tmp/logs/puppet_run_summary.log'
