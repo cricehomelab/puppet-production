@@ -17,6 +17,7 @@ node 'janus-main.local' {
 
 # Jellyfin node
 node "dionysus-main.local" {
+    include filebeats
     include updates
     include jellyfin
     include networking
