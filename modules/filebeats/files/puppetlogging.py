@@ -15,7 +15,6 @@ def get_last_run_info():
         lines = f.readlines()
 
     line_to_log_1 = f"'{datetime.now()}' - last_run_info -"
-    line_to_log_2 = f"'{datetime.now()}' - last_run_summary -"
 
     for num, line in enumerate(lines):
         if re.search("resources:\s", line):
@@ -26,7 +25,7 @@ def get_last_run_info():
             line_to_log_1 += f'{lines[num + 5][0:-1]}'
             line_to_log_1 += f'{lines[num + 6][0:-1]}'
             line_to_log_1 += f'{lines[num + 7][0:-1]}'
-    line_to_return = f'{line_to_log_1} \n{line_to_log_2}'
+    line_to_return = f'{line_to_log_1}'
     return line_to_return
 
 if __name__ == '__main__':

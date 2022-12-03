@@ -9,6 +9,4 @@ systemctl start filebeat
 
 filebeat modules enable logstash
 
-cp /tmp/secrets/filebeat/logstash.yml /etc/filebeat/modules.d/logstash.yml
-
 systemctl restart filebeat
