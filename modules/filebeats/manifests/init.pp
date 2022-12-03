@@ -16,5 +16,9 @@ class filebeats{
     ensure => running,
   }
 
+  file { '/etc/scripts/puppetlogging.py':
+    ensure => present,
+    source => 'puppet:///modules/filebeats/puppetlogging.py',
+  }
 
 }
