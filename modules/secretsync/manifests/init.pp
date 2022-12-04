@@ -13,12 +13,8 @@ class secretsync {
     source => 'puppet:///modules/secretsync/git_init.sh',
   }
 
-  exec { 'sh /tmp/secrets/git_init.sh' :
-    provider => shell,
-    onlyif   => 'test -f /etc/pihole/setupvars.conf',
-  }
-
   cron { 'secretsync' :
+    ensure  => absent,
     command => 'sh /tmp/secrets/secretsync.sh',
     minute  => '*/5',
   }
