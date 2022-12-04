@@ -1,14 +1,14 @@
 
 # this node is for pihole.
 node 'iana-main.local' {
-    #include secretsync
+    include secretsync
     include filebeats
     include updates 
     include pihole
     include networking
 }
 node 'janus-main.local' {
-    #include secretsync
+    include secretsync
     include filebeats
     include updates 
     include pihole
