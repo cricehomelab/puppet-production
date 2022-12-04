@@ -7,10 +7,10 @@ class filebeats{
   }
 
   # execute install script
-  exec { '/etc/scripts/install_filebeats.sh':
-    provider => shell,
-    creates => '/etc/filebeat/filebeat.yml',
-  }
+  #exec { '/etc/scripts/install_filebeats.sh':
+  #  provider => shell,
+  #  creates => '/etc/filebeat/filebeat.yml',
+  #}
 
   # move logstash.yml to correct place.
   file { '/etc/filebeat/modules.d/logstash.yml':
