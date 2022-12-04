@@ -34,7 +34,7 @@ node "seshat-main.local" {
     include updates
     include secretsync
     include networking
-    include filebeats
+    #include filebeats
     #include logging
 }
 
