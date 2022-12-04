@@ -32,6 +32,7 @@ node "geppetto-main.local" {
 # logging node.
 node "seshat-main.local" {
     include updates
+    include secretsync
     #include networking
     #include logging
 }
