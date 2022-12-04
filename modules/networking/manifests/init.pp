@@ -9,7 +9,7 @@ class networking {
     "macaddress" => $::facts[networking][mac],
   }
 
-  # configuration of hosts file. 
+  # configuration of hosts file.
   $hosts_params = {
     "hostname"  => $::facts[networking][hostname],
     "fqdn"      => $::facts[networking][fqdn],
@@ -41,6 +41,6 @@ class networking {
   file { $hosts_file :
     ensure  => present,
     content => $hosts_output,
-    require => File[$ip_config_file],    
+    require => File[$ip_config_file],
   }
 }
