@@ -27,7 +27,7 @@ node "dionysus-main.local" {
 node "geppetto-main.local" {
     include updates
     include reposync
-    include filebeats
+    include filebeat
 }
 
 # logging node.
