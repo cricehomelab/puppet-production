@@ -1,13 +1,15 @@
 
-# this node is for pihole.
-node 'iana-main.local' {
+# primary pihole node. 
+node 'janus-main.local' {
     include secretsync
     include filebeats
     include updates 
     include pihole
     include networking
 }
-node 'janus-main.local' {
+
+# this node is for pihole. This is a secondary node. 
+node 'iana-main.local' {
     include secretsync
     include filebeats
     include updates 
@@ -24,6 +26,7 @@ node "dionysus-main.local" {
     include disks
 }
 
+# This is the Puppet master. 
 node "geppetto-main.local" {
     include updates
     include reposync
