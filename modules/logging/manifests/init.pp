@@ -8,4 +8,8 @@ class logging {
     provider => shell,
     unless => 'test -f /home/charlie/elastisearchinfo.txt'
   }
+
+  service { 'elasticsearch':
+    ensure => running,
+  }
 }
