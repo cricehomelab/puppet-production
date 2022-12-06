@@ -39,7 +39,7 @@ node "seshat-main.local" {
     include secretsync
     include networking
     include filebeats
-    #include logging
+    include logging
 }
 
 # setting a default node.
